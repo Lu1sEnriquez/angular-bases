@@ -1,0 +1,31 @@
+<hr />
+<h1>{{ name }}</h1>
+<dl class="card  shadow  ">
+  <td>Nombre:</td>
+  <dd>{{ name }}</dd>
+
+  <td>Edad:</td>
+  <dd>{{ age }}</dd>
+
+  <td>Metodo</td>
+  <dd>{{ getHeroDescription() }}</dd>
+
+  <td>Capitalizado</td>
+  <dd>{{ CapitalizedName }}</dd>
+</dl>
+<div class="d-grid gap-3">
+  <button
+    *ngIf="name == 'ironman'"
+    class="btn btn-primary mx-2"
+    (click)="changeHeroName()"
+  >
+    Cambiar Nombre
+  </button>
+  <button
+  *ngIf="age != 100"
+  class="btn btn-primary" (click)="changeHeroAge()">
+    Cambiar Edad
+  </button>
+
+  <button class="btn btn-primary " (click)="reset()">reset</button>
+</div>
